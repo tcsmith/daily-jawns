@@ -158,43 +158,6 @@ def valid_parens_1(text: str) -> bool:
     return True
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def valid_parens_2(text: str) -> bool:
     parens_stack = []
     parens_map = {
