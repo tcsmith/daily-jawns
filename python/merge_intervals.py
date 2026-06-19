@@ -132,11 +132,8 @@ def test_merge_intervals():
 
     print("all tests passed")
 
-def print_intervals(intervals: list[Interval]) -> None:
-    for i in intervals:
-        i.print()
 
-def merge_intervals_data_classes(intervals: list[list[int]]) -> list[list[int]]:
+def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
     interval_dcs = [Interval(i[0], i[1]) for i in intervals]
     interval_dcs.sort(key=lambda i: (i.start, i.end))
 
@@ -156,21 +153,6 @@ def merge_intervals_data_classes(intervals: list[list[int]]) -> list[list[int]]:
                 last_append.end = iv.end
 
     return [[i.start, i.end] for i in merged]
-
-
-
-def merge_intervals(intervals) -> list[list[int]]:
-    return merge_intervals_data_classes(intervals=intervals)
-
-
-def main():
-    intervals = [[1, 4], [2, 3]]
-    merged = merge_intervals(intervals=intervals)
-    print(merged)
-    intervals = [[1,4],[4,5]]
-    merged = merge_intervals(intervals=intervals)
-    print(merged)
-
 
 if __name__ == "__main__":
     test_merge_intervals()
