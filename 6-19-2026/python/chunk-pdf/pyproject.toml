@@ -1,0 +1,20 @@
+[project]
+name = "chunk-pdf"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Todd Smith", email = "todd@leftfieldgames.net" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pypdf>=6.13.3",
+    "typer>=0.26.7",
+]
+
+[project.scripts]
+chunk-pdf = "chunk_pdf.cli_typer:main"
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
