@@ -1,0 +1,21 @@
+[project]
+name = "purl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Todd Smith", email = "todd@leftfieldgames.net" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "mypy>=2.1.0",
+    "ruff>=0.15.19",
+    "typer>=0.26.7",
+]
+
+[project.scripts]
+purl = "purl:main"
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
